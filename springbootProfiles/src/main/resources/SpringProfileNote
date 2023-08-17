@@ -1,0 +1,42 @@
+                   SPRINGBOOT PROFILES
+--------------------------------------------------------------------------------------
+when we develop an  application in realtime that application will be tested in
+multiple Environments before deploying on production.
+- production is nothing but live environment
+Production is Live Environment
+
+WE will test our application in several Environment
+a) Dev  (this environment is ue by developer)
+b) SIT(QA Team is use This Environment)
+c) UAT(Client side member test apllication)
+D) PILOT(PRE PRODUCTION ENVIRONMENT) before deploying the Production environment we test the application on this environment
+E)PRODUCTION
+JENKIS is TOOL for deploying the project on environment
+
+
+For every environment server environment specific properties will be available
+BELOW CONFIGURATION will change environment to environment
+
+a) DB PROPERTIES
+b) SMTP Configuration
+c) Logging properties
+D)Redis server Configuration
+e) APACHE KAFKA CONFIGURATION
+
+all the above properties we are writing in application in application.properties
+
+we can say to spring boot application to use this application properties
+following way
+
+Other profiles will always be evaluated on top of the default profile. This means that if a property is defined in the default profile, but not in the foo profile, the property value will be populated from the default profile. This is very handy for defining default values that are valid across all profiles.
+
+
+we can use for to set the spring profile active when we have run our application in environment
+
+- java -Dspring.profiles.active=foo -jar profiles-0.0.1-SNAPSHOT.jar
+
+
+
+
+
+
